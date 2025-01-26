@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #onresize-message {
+      display: none;
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body onresize="showMessage()">
+  <div class="em-and-strong">
+    <p><em>It is important</em> to put <strong>pineapple</strong> on hawaiian pizza.</p>
+  </div>
+
+  <div class="align">
+    <h1 align="center">Heading</h1>
+    <h4 align="left">Heading 4 aligned left</h4>
+    <p align="right">I am aligned to the right of the page</p>
+    <p align="justify">Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+    dolore magna aliqua. Posuere urna nec tincidunt praesent. Sagittis
+    aliquam malesuada bibendum arcu vitae elementum curabitur vitae.
+    Lectus nulla at volutpat diam. Consequat ac felis donec et odio
+    pellentesque diam volutpat commodo. Tincidunt praesent semper
+    feugiat nibh sed. Id diam maecenas ultricies mi eget. Est ante in
+    </p>
+  </div>
+
+  <div class="type">
+    <div class="ordered-list">
+      <ol type="I">
+        <li>Item One</li>
+        <ol type="i">
+          <li>Sub-Item One</li>
+        </ol>
+
+        <li>Item Two</li>
+        <ol type="i">
+          <li>Sub-Item Two</li>
+        </ol>
+      </ol>
+    </div>
+    <div class="unordered-list">
+      <h3>Main List</h3>
+      <ul>
+        <li>SubList One</li>
+        <ul type="circle">
+          <li>List Item One in SubList One</li>
+          <ul type="square">
+            <li>Item One</li>
+            <li>Item Two</li>
+          </ul>
+        </ul>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exercises">
+    <div class="1">
+      <p id="onresize-message">
+        I researched p tags and found that event tags also apply to them. <br>
+        This p tag should only appear when you resize the page.<br>
+        Neeto! lol<br><br>
+        Unfortunately I couldn't get the event attribute to work in the p tag, but it is in the<br>
+        body tag and it's working now.  The event listener is triggered with the onresize attribute<br>
+        and then that calls a function that sets the style of my p tag to make it appear.
+      </p>
+      <script>
+        function showMessage() {
+          const message = document.getElementById("onresize-message");
+          message.style.display = "block";
+
+          setTimeout(() => {
+            message.style.display = "none";
+          }, 10000);
+        }
+      </script>
+    </div>
+    <div class="2">
+      <p><mark>I am trying</mark> other <small>semantic</small> <sub>emphasis</sub> tags in HTML<br>
+      These along with the <em>em tags</em> and the <strong>strong tags</strong> allow me to correctly <em>emphasize</em> my specific content.</p>
+    </div>
+  </div>
+  <div class="3">
+    <table style="float:right">
+      <tr>
+        <th>Name</th>
+        <th>Principle</th>
+      </tr>
+      <tr>
+        <td>Style Attribute</td>
+        <td>Allows to apply styles to a specific tag</td>
+      </tr>
+      <tr>
+        <td>Float Right</td>
+        <td>It did the effect you're seeing now!
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
