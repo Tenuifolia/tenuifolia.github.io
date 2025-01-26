@@ -4,10 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    #onresize-message {
+      display: none;
+    }
+    </style>
 </head>
-<body>
+<body onresize="showMessage()">
   <p>Look I made a website!!</p>
-  <a href="./navigation.html">Home</a>
+  <div id="onresize-message" >
+    <a href="./navigation.html">Home</a>
+
+  </div>
 </body>
 <script>
   function showMessage() {
