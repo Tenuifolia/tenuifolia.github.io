@@ -6,10 +6,87 @@
   <title>Document</title>
 </head>
 <body>
-  <p>Here is a <br> break in the paragraph</p>
+  <div class="return-link">
+    <a href="../chpt-4-home.html">Return to Chapter 4</a>
+  </div>
+  <div class="br-and-hr">
+    <p>Here is a <br> break in the paragraph</p>
+    <hr>
+    <br>
+    <p>Here is another element after
+    the hr and another br tag</p>
+  </div>
   <hr>
-  <br>
-  <p>Here is another element after
-  the hr and another br tag</p>
+  <div class="div-and-span">
+    <div>
+      <h1>Welcome</h1>
+      <p>Your best rest is just a click away.</p>
+    </div>
+
+    <div>
+      <h2>About Us</h2>
+      <p>We are a locally run and owned <span id="bed-breakfast">bed and breakfast</span>. Since 1917, we have specialized in local cuisine, destination connection and hospitality.</p>
+    </div>
+
+    <div>
+      <h2>What to expect when you stay with us:</h2>
+      <div class="list-container">
+        <ul>
+          <li>Peace and Quiet</li>
+          <li>Free Amenities for a no-worries stay</li>
+          <li>A locally inspired breakfast</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="class-and-id-attributes">
+    <div class="hero-section" id="Welcome">
+      <h1>Welcome</h1>
+      <p>Your best rest is just a click away.</p>
+    </div>
+    <div class="blog-section" id="blog">
+      <div class="blog-post" id="state-rec">
+        <h4 class="blog-heading">LocalB&B receives state recognition</h4>
+        <p class="blog-body">We are proud to announce our local B&B has received state recognition for maintaining the tradition of our great state.</p>
+      </div>
+      <div class="blog-post" id="piano-restore">
+        <h4 class="blog-heading">Local B&B resotres aunique piano</h4>
+        <p class="blog-body">In order to preserve the tration of the
+          B&B while ensuring the proper maintenance of items in the B&B,
+          we are working with a local piano repair technician and
+          national historical society to restore our player piano.
+        </p>
+      </div>
+
+    </div>
+  </div>
+  <div class="exercises">
+    <ol>
+      <li>Why might you use the &lt;br&gt; tag within a paragraph, and how does it differ from the &lt;hr&gt; tag?</li>
+      <ul>
+        <li>The &lt;br&gt; tag creates a new line in the code.</li>
+        <li>Where as the &lt;hr&gt; tag creates a line that croses the whole page dividing vertically anything that came before the tag with what comes after.</li>
+      </ul>
+      <li>Explain the purpose of the &lt;div&gt; and &lt;span&gt; tags in HTML, and provide a scenario where you might use each to enhance code organization.</li>
+      <ul>
+        <li>The &lt;div&gt; tag helps divide the code into different section, defaulting to vertical separations between the sections.</li>
+        <li>The &lt;span&gt; tag also divides the code into different sections, but defaults to keeping the separations 'inline', or doesn't divide the different sections vertically.</li>
+      </ul>
+      <li>Differentiate between the class and id attributes in HTML. Provide an example scenario where using both attributes could be beneficial in organizing and styling a webpage.</li>
+      <ul>
+        <li>The class attribute allows for giving a name to a section of code that you can use to identify and group any section that has the same class name.</li>
+        <li>Similarly the id attribute allows for giving a name to a section but the id must be a unique name that the following section will be paired to as a key-value pair.</li>
+      </ul>
+      <li>Create a new html file and add a paragraph with a line break (&lt;br&gt;) between each sentence. Introduce a horizontal rule (&lt;hr&gt;) after the paragraph. Convert this one paragraph to several paragraph tags, each containing one sentence. Compare and contrast the advantages and disadvantages of each option.</li>
+      <ul>
+        <li><a href="./pages/exercise-4.html">See exercise-4.html</a></li>
+      </ul>
+      <li>Create a simple webpage introducing a team with individual profiles. Assign unique id attributes to each team member's section, ensuring that no two sections share the same id. Use these id values to create navigation links to each team member. How might copy and pasting elements be appropriate to save time developing the webpage. Use hr tags between each of the profile sections.</li>
+      <ul>
+        <li><a href="./pages/exercise-5.html">See exercise-5.html</a></li>
+      </ul>
+    </ol>
+  </div>
 </body>
 </html>
