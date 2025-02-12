@@ -9,8 +9,147 @@
   <div class="return-link">
     <a href="../chpt-4-home.html">Return to Chapter 4</a>
   </div>
-  <form>
-    <label for="email">Email</label>
-  </form>
+  <div class="4-6-container">
+    <div class="lesson-notes-wrapper">
+      <h2>Form Practice</h2>
+
+      <form>
+        <div class="email-field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="email">
+        </div>
+
+        <div class="password-field">
+          <label for="password">Password</label>
+          <input id="password" name="pasasword" type="password" placeholder="password">
+        </div>
+
+        <div class="address-field">
+          <label for="address">Address</label>
+          <input id="address" name="address" type="address" placeholder="address">
+        </div>
+
+        <div class="reservation-field">
+          <label for="reservation">Reservation Date</label>
+          <input id="reservation" name="date" type="date">
+        </div>
+
+        <div class="appetizer-field">
+          <input name="appetizer" id="mozarella-sticks" type="radio" value="mozarellaSticks">
+          <label for="mozarella-sticks">Mozarella Sticks</label>
+          <input name="appetizer" id="mac-n-cheese-bites" type="radio" value="macNCheeseBites">
+          <label for="mac-n-cheese-bites">Mac n' Cheese</label>
+          <input name="appetizer" id="hush-puppies" type="radio" value="hushPuppies">
+          <label for="hush-puppies">Hush Puppies</label>
+        </div>
+
+        <div class="sides-fields">
+          <input name="sides" id="drink" type="checkbox" value="drink">
+          <label for="drink">Drink</label>
+          <input name="sides" id="dessert" type="checkbox" value="dessert">
+          <label for="dessert">Dessert</label>
+          <input name="sides" id="salad" type="checkbox" value="salad">
+          <label for="salad">Salad</label>
+        </div>
+
+        <div class="main-course-field">
+          <select name="main-course">
+            <option value="">Choose a main course</option>
+            <option value="spaghetti">Spaghetti</option>
+            <option value="linguine">Linguine</option>
+            <option value="lasagna">Lasagna</option>
+          </select>
+        </div>
+
+        <div class="additional-info-field">
+          <label for="addition-info">Please provide additional information for your reservation:</label>
+          <textarea name="additional-info" id="additional-info" rows="10" placeholder="type additional information here"></textarea>
+        </div>
+
+        <div class="submit-field">
+          <input type="submit" value="Book my Reservation">
+          <button>Book My Reservation (button)</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="exercises-wrapper">
+      <h1>Exercises</h1>
+      <div class="exercise-1">
+        <h3>Exercise 1</h3>
+        <form>
+          <div class="hear-about-us-dropdown">
+            <select name="hear-about-us">
+              <option value="">How did you hear about us?</option>
+              <option value="friend">Friend</option>
+              <option value="online-advertisement">Online Advertisement</option>
+              <option value="social-media">Social Media</option>
+            </select>
+          </div>
+          <div class="experience-rating">
+            <h4>Rate your experience with us.</h4>
+            <input name="rating" id="excelent" type="radio" value="excelent">
+            <label for="excelent">Excelent</labal>
+            <input name="rating" id="good" type="radio" value="good">
+            <label for="good">Good</label>
+            <input name="rating" id="fair" type="radio" value="fair">
+            <label for="fair">Fair</label>
+            <input name="rating" id="poor" type="radio" value="poor">
+            <label for="poor">Poor</label>
+          </div>
+          <div class="interests-checkboxes">
+            <h4>What are your main interests?</h4>
+            <input name="interest" id="technology" type="checkbox" value="technology">
+            <label for="technology">Technology</label>
+            <input name="interest" id="sports" type="checkbox" value="sports">
+            <label for="sports">Sports</label>
+            <input name="interst" id="music" type="checkbox" value="music">
+            <label for="music">Music</label>
+            <input name="interst" id="travel" type="checkbox" value="travel">
+            <label for="travel">Travel</label>
+          </div>
+          <div class="comments-textarea">
+            <h4>Additional Feedback:</h4>
+            <textarea name="comments" id="comments" rows="5" placeholder="Please provide additional feedback:"></textarea>
+            <!-- <label for="comments">I don't think I need this label</label> -->
+          </div>
+        </form>
+      </div>
+      <div class="exercise-2">
+        <h3>Exercise 2</h3>
+        <form>
+          <div class="product-name-field">
+            <label for="product-name">Product Name</label>
+            <input name="product-name" id="product-name" type="text" placeholder="Product">
+          </div>
+          <div class="quantity-field">
+            <label for="quantity">Quanity</label>
+            <input name="quanity" id="quantity" type="number" placeholder="0">
+          </div>
+          <div class="delivery-address-field">
+            <label for="delivery-address">Shipping Address</label>
+            <textarea name="delivery-address" id="delivery-address" rows="5"></textarea>
+          </div>
+          <div class="delivery-date-field">
+            <label for="delivery-date">Preferred Delivery Date</label>
+            <input name="delivery-date" id="delivery-date" type="date">
+          </div>
+          <div class="gift-wrapped-field">
+            <label for="is-gift-wrapped">Add Gift Wrapping</label>
+            <input name="is-gift-wrapped" id="is-gift-wrapped" type="checkbox">
+          </div>
+          <div class="payment-method-field">
+            <h4>Choose Payment Method</h4>
+            <input name="payment-method" id="credit-card" type="radio" value="credit-card">
+            <label for="credit-card">Credit Card</label>
+            <input name="payment-method" id="paypal" type="radio" value="paypal">
+            <label for="paypal">PayPal</label>
+            <input name="payment-method" id="bank-transfer" type="radio" value="band-transfer">
+            <label for="bank-transfer">Bank Transfer</label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
