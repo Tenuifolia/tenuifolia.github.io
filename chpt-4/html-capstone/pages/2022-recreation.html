@@ -7,7 +7,6 @@
   <style>
     .navbar{
       background-color:#1e1e1e;
-      overflow: hidden;
       display: flex;
       align-items: center;
     }
@@ -19,7 +18,8 @@
     }
     .dropdown-option {
       position: relative;
-      display: inline-block
+      display: inline-block;
+      background-color: #1e1e1e;
     }
     .dropdown-option .dropdown-button {
       background-color: #1e1e1e;
@@ -33,20 +33,23 @@
     .dropdown-option .dropdown-menu {
       display: none;
       position: absolute;
-      top: 100%;
+      top: 170%;
       left: 0;
       min-width: 160px;
-      z-index: 1;
+      /* z-index: 0; */
+      height: 200px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      background-color: #1e1e1e;
     }
     .dropdown-option .dropdown-menu a {
-      background-color: #1e1e1e;
       display: block;
+      padding: 10px 10px;
     }
     </style>
 </head>
 <body>
     <div class="navbar">
-      <a href="https://wordpress.org" target="_blank"> <img src="../images/WordPress-logotype-wmark-white.png" width="80px" height="80px"></a>
+      <a href="../index.html"> <img src="../images/WordPress-logotype-wmark-white.png" width="80px" height="80px"></a>
       <a href="redirect-page.html">News</a>
       <a href="redirect-page.html">Showcase</a>
       <a href="redirect-page.html">Hosting</a>
@@ -58,6 +61,26 @@
           <a href="redirect-page.html">Patterns</a>
           <a href="redirect-page.html">Blocks</a>
           <a href="redirect-page.html">Openverse</a>
+        </div>
+      </div>
+      <div class="dropdown-option">
+        <button class="dropdown-button" onclick="toggleDropdown('learn-dropdown')">Learn</button>
+        <div class="dropdown-menu" id="learn-dropdown">
+          <a href="redirect-page.html">Learn WordPress</a>
+          <a href="redirect-page.html">Documentation</a>
+          <a href="redirect-page.html">Forums</a>
+          <a href="redirect-page.html">Developers</a>
+          <a href="redirect-page.html">WordPress.tv</a>
+        </div>
+      </div>
+      <div class="dropdown-option">
+        <button class="dropdown-button" onclick="toggleDropdown('community-dropdown')">Community</button>
+        <div class="dropdown-menu" id="community-dropdown">
+          <a href="redirect-page.html">Make WordPress</a>
+          <a href="redirect-page.html">Photo Directory</a>
+          <a href="redirect-page.html">Five for the Future</a>
+          <a href="redirect-page.html">Events</a>
+          <a href="redirect-page.html">Job Board</a>
         </div>
       </div>
     </div>
@@ -72,13 +95,6 @@
           dropdowns[0].style.display = "none"
         }
       }
-        // if (!event.target.matches('.dropdown-button')) {
-        //   let dropdown = document.getElementById("extend-dropdown")
-        //   dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block"
-          // if (dropdown[0].style.display === "block") {
-          // }
-      //   }
-      // }
     </script>
 
   </ul>
