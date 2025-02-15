@@ -4,13 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
+  <script src="https://kit.fontawesome.com/cc8cca8e89.js" crossorigin="anonymous"></script>  <style>
+    body {
+      margin:0;
+    }
     .navbar{
+      display: flex;
       background-color:#1e1e1e;
+      justify-content: space-between;
+      /* width: 100%; */
+    }
+    .navbar .left-group-wrapper {
       display: flex;
       align-items: center;
     }
-    .navbar a {
+    .navbar .left-group-wrapper a {
       color: white;
       text-decoration: none;
       display: inline-block;
@@ -45,43 +53,73 @@
       display: block;
       padding: 10px 10px;
     }
+    .navbar .right-group-wrapper {
+      display:flex;
+      align-items: center;
+
+    }
+    .fa-magnifying-glass {
+      color: white;
+    }
+    .right-group-wrapper .link-button{
+      display: inline-block;
+      background-color: blue;
+      border: none;
+      margin: 0 20px;
+      padding-top: 9px;
+      height: 28px;
+      width: 140px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      text-align: center;
+
+    }
     </style>
 </head>
 <body>
     <div class="navbar">
-      <a href="../index.html"> <img src="../images/WordPress-logotype-wmark-white.png" width="80px" height="80px"></a>
-      <a href="redirect-page.html">News</a>
-      <a href="redirect-page.html">Showcase</a>
-      <a href="redirect-page.html">Hosting</a>
-      <div class="dropdown-option">
-        <button class="dropdown-button" onclick="toggleDropdown('extend-dropdown')">Extend</button>
-        <div class="dropdown-menu" id="extend-dropdown">
-          <a href="redirect-page.html">Themes</a>
-          <a href="redirect-page.html">Plugins</a>
-          <a href="redirect-page.html">Patterns</a>
-          <a href="redirect-page.html">Blocks</a>
-          <a href="redirect-page.html">Openverse</a>
+      <div class="left-group-wrapper">
+
+        <a href="../index.html"> <img src="../images/WordPress-logotype-wmark-white.png" width="80px" height="80px"></a>
+        <a href="redirect-page.html">News</a>
+        <a href="redirect-page.html">Showcase</a>
+        <a href="redirect-page.html">Hosting</a>
+        <div class="dropdown-option">
+          <button class="dropdown-button" onclick="toggleDropdown('extend-dropdown')">Extend<i class="fa-solid fa-angle-down"></i></button>
+          <div class="dropdown-menu" id="extend-dropdown">
+            <a href="redirect-page.html">Themes</a>
+            <a href="redirect-page.html">Plugins</a>
+            <a href="redirect-page.html">Patterns</a>
+            <a href="redirect-page.html">Blocks</a>
+            <a href="redirect-page.html">Openverse</a>
+          </div>
+        </div>
+        <div class="dropdown-option">
+          <button class="dropdown-button" onclick="toggleDropdown('learn-dropdown')">Learn<i class="fa-solid fa-angle-down"></i></button>
+          <div class="dropdown-menu" id="learn-dropdown">
+            <a href="redirect-page.html">Learn WordPress</a>
+            <a href="redirect-page.html">Documentation</a>
+            <a href="redirect-page.html">Forums</a>
+            <a href="redirect-page.html">Developers</a>
+            <a href="redirect-page.html">WordPress.tv</a>
+          </div>
+        </div>
+        <div class="dropdown-option">
+          <button class="dropdown-button" onclick="toggleDropdown('community-dropdown')">Community<i class="fa-solid fa-angle-down"></i></button>
+          <div class="dropdown-menu" id="community-dropdown">
+            <a href="redirect-page.html">Make WordPress</a>
+            <a href="redirect-page.html">Photo Directory</a>
+            <a href="redirect-page.html">Five for the Future</a>
+            <a href="redirect-page.html">Events</a>
+            <a href="redirect-page.html">Job Board</a>
+          </div>
         </div>
       </div>
-      <div class="dropdown-option">
-        <button class="dropdown-button" onclick="toggleDropdown('learn-dropdown')">Learn</button>
-        <div class="dropdown-menu" id="learn-dropdown">
-          <a href="redirect-page.html">Learn WordPress</a>
-          <a href="redirect-page.html">Documentation</a>
-          <a href="redirect-page.html">Forums</a>
-          <a href="redirect-page.html">Developers</a>
-          <a href="redirect-page.html">WordPress.tv</a>
-        </div>
-      </div>
-      <div class="dropdown-option">
-        <button class="dropdown-button" onclick="toggleDropdown('community-dropdown')">Community</button>
-        <div class="dropdown-menu" id="community-dropdown">
-          <a href="redirect-page.html">Make WordPress</a>
-          <a href="redirect-page.html">Photo Directory</a>
-          <a href="redirect-page.html">Five for the Future</a>
-          <a href="redirect-page.html">Events</a>
-          <a href="redirect-page.html">Job Board</a>
-        </div>
+      <div class="right-group-wrapper">
+        <a href="redirect-page.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+
+        <a href="redirect-page.html" class="link-button">Get WordPress</a>
       </div>
     </div>
     <script>
