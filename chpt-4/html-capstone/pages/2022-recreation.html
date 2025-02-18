@@ -9,19 +9,29 @@
       margin:0;
     }
     .navbar{
-      display: flex;
       background-color:#1e1e1e;
-      justify-content: space-between;
       /* width: 100%; */
     }
-    .navbar .left-group-wrapper {
+    .navbar .top-navbar-container {
+      display: flex;
+      justify-content: space-between;
+
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    .top-navbar-container {
+      border-bottom: solid;
+      border-bottom-width: 1px;
+      border-bottom-color: #ffffff26;
+      height: 70px;
+    }
+    .top-navbar-container .left-group-wrapper {
       display: flex;
       align-items: center;
     }
-    .navbar .left-group-wrapper a {
-      color: white;
-      text-decoration: none;
-      display: inline-block;
+    .top-navbar-container .left-group-wrapper a {
       padding-left: 15px;
     }
     .dropdown-option {
@@ -36,7 +46,7 @@
       cursor: pointer;
       font-family: none;
       font-size: 16px;
-      padding-left: 15px;
+      padding: 0 8px;
     }
     .dropdown-option .dropdown-menu {
       display: none;
@@ -45,15 +55,14 @@
       left: 0;
       min-width: 160px;
       /* z-index: 0; */
-      height: 200px;
       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
       background-color: #1e1e1e;
     }
     .dropdown-option .dropdown-menu a {
       display: block;
-      padding: 10px 10px;
+      padding: 15px 10px;
     }
-    .navbar .right-group-wrapper {
+    .top-navbar-container .right-group-wrapper {
       display:flex;
       align-items: center;
 
@@ -61,7 +70,7 @@
     .fa-magnifying-glass {
       color: white;
     }
-    .right-group-wrapper .link-button{
+    .top-navbar-container .right-group-wrapper .link-button{
       display: inline-block;
       background-color: blue;
       border: none;
@@ -69,70 +78,150 @@
       padding-top: 9px;
       height: 28px;
       width: 140px;
-      color: white;
       text-decoration: none;
       font-weight: 600;
       text-align: center;
 
     }
+    .bottom-navbar-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 70px;
+      height: 70px;
+    }
+    .bottom-navbar-container .left-link-wrapper {
+      display: flex;
+      align-items: center;
+    }
+    .bottom-navbar-container .left-link-wrapper a{
+      color: white;
+      margin: 0 10px
+    }
+    .bottom-navbar-container .right-link-wrapper {
+      display: flex;
+      align-items: center;
+    }
+    .bottom-navbar-container .right-link-wrapper a{
+      color: white;
+      margin: 0 10px
+    }
     </style>
 </head>
 <body>
     <div class="navbar">
-      <div class="left-group-wrapper">
-
-        <a href="../index.html"> <img src="../images/WordPress-logotype-wmark-white.png" width="80px" height="80px"></a>
-        <a href="redirect-page.html">News</a>
-        <a href="redirect-page.html">Showcase</a>
-        <a href="redirect-page.html">Hosting</a>
-        <div class="dropdown-option">
-          <button class="dropdown-button" onclick="toggleDropdown('extend-dropdown')">Extend<i class="fa-solid fa-angle-down"></i></button>
-          <div class="dropdown-menu" id="extend-dropdown">
-            <a href="redirect-page.html">Themes</a>
-            <a href="redirect-page.html">Plugins</a>
-            <a href="redirect-page.html">Patterns</a>
-            <a href="redirect-page.html">Blocks</a>
-            <a href="redirect-page.html">Openverse</a>
+      <div class="top-navbar-container">
+        <div class="left-group-wrapper">
+          <a href="../index.html"> <img src="../images/WordPress-logotype-wmark-white.png" width="50px" height="50px"></a>
+          <a href="redirect-page.html">News</a>
+          <a href="redirect-page.html">Showcase</a>
+          <a href="redirect-page.html">Hosting</a>
+          <div class="dropdown-option">
+            <button class="dropdown-button">Extend<i class="fa-solid fa-angle-down"></i></button>
+            <div class="dropdown-menu" id="extend-dropdown">
+              <a href="redirect-page.html">Themes</a>
+              <a href="redirect-page.html">Plugins</a>
+              <a href="redirect-page.html">Patterns</a>
+              <a href="redirect-page.html">Blocks</a>
+              <a href="redirect-page.html">Openverse</a>
+            </div>
+          </div>
+          <div class="dropdown-option">
+            <button class="dropdown-button">Learn<i class="fa-solid fa-angle-down"></i></button>
+            <div class="dropdown-menu" id="learn-dropdown">
+              <a href="redirect-page.html">Learn WordPress</a>
+              <a href="redirect-page.html">Documentation</a>
+              <a href="redirect-page.html">Forums</a>
+              <a href="redirect-page.html">Developers</a>
+              <a href="redirect-page.html">WordPress.tv</a>
+            </div>
+          </div>
+          <div class="dropdown-option">
+            <button class="dropdown-button">Community<i class="fa-solid fa-angle-down"></i></button>
+            <div class="dropdown-menu" id="community-dropdown">
+              <a href="redirect-page.html">Make WordPress</a>
+              <a href="redirect-page.html">Photo Directory</a>
+              <a href="redirect-page.html">Five for the Future</a>
+              <a href="redirect-page.html">Events</a>
+              <a href="redirect-page.html">Job Board</a>
+            </div>
+          </div>
+          <div class="dropdown-option">
+            <button class="dropdown-button">About<i class="fa-solid fa-angle-down"></i></button>
+            <div class="dropdown-menu" id="about-dropdown">
+              <a href="redirect-page.html">About WordPress</a>
+              <a href="redirect-page.html">Enterprise</a>
+              <a href="redirect-page.html">Gutenberg</a>
+            </div>
           </div>
         </div>
-        <div class="dropdown-option">
-          <button class="dropdown-button" onclick="toggleDropdown('learn-dropdown')">Learn<i class="fa-solid fa-angle-down"></i></button>
-          <div class="dropdown-menu" id="learn-dropdown">
-            <a href="redirect-page.html">Learn WordPress</a>
-            <a href="redirect-page.html">Documentation</a>
-            <a href="redirect-page.html">Forums</a>
-            <a href="redirect-page.html">Developers</a>
-            <a href="redirect-page.html">WordPress.tv</a>
-          </div>
-        </div>
-        <div class="dropdown-option">
-          <button class="dropdown-button" onclick="toggleDropdown('community-dropdown')">Community<i class="fa-solid fa-angle-down"></i></button>
-          <div class="dropdown-menu" id="community-dropdown">
-            <a href="redirect-page.html">Make WordPress</a>
-            <a href="redirect-page.html">Photo Directory</a>
-            <a href="redirect-page.html">Five for the Future</a>
-            <a href="redirect-page.html">Events</a>
-            <a href="redirect-page.html">Job Board</a>
-          </div>
+        <div class="right-group-wrapper">
+          <a href="redirect-page.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href="redirect-page.html" class="link-button">Get WordPress</a>
         </div>
       </div>
-      <div class="right-group-wrapper">
-        <a href="redirect-page.html"><i class="fa-solid fa-magnifying-glass"></i></a>
-
-        <a href="redirect-page.html" class="link-button">Get WordPress</a>
+      <!-- <hr> -->
+      <div class="bottom-navbar-container">
+        <div class="left-link-wrapper">
+          <a href="redirect-page.html">Themes</a>
+        </div>
+        <div class="right-link-wrapper">
+          <a href="redirect-page.html">Submit a theme</a>
+          <a href="redirect-page.html">Commercial theme companies</a>
+          <a href="redirect-page.html">My favorites</a>
+          <a href="redirect-page.html">Log in</a>
+        </div>
       </div>
     </div>
     <script>
-      function toggleDropdown(menuId) {
-        let dropdown = document.getElementById(menuId);
-        dropdown.style.display = (dropdown.style.display === "block") ? "none": "block"
-      }
-      window.onclick = function(event) {
-        if (!event.target.matches('.dropdown-button')){
-          let dropdowns = document.getElementsByClassName("dropdown-menu")
-          dropdowns[0].style.display = "none"
-        }
-      }
+      document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("click", ((event) => {
+          let isDropdownButton = event.target.matches(".dropdown-button");
+          let isDropdownMenu = event.target.closest(".dropdown-menu");
+
+          let dropdowns = document.querySelectorAll(".dropdown-menu");
+
+          // Handle button click (toggle the correct dropdown)
+          if (isDropdownButton) {
+            let button = event.target;
+            let targetDropdown = button.nextElementSibling;
+
+            // Close all dropdowns except the one being clicked
+            dropdowns.forEach((dropdown) => {
+              if (dropdown !== targetDropdown) {
+                dropdown.style.display = "none";
+              }
+            });
+
+            // Toggle visibility of clicked dropdown
+            targetDropdown.style.display =
+              targetDropdown.style.display === "block" ? "none" : "block";
+          }
+          // If clicked outside any dropdown or button, close all dropdowns
+          else if (!isDropdownMenu) {
+            dropdowns.forEach((dropdown) => {
+              dropdown.style.display = "none";
+            });
+          }
+        }));
+      });
+      // function toggleDropdown(menuId) {
+      //   let dropdown = document.getElementById(menuId);
+      //   dropdown.style.display = (dropdown.style.display === "block") ? "none": "block"
+      // }
+      // window.onclick = function(event) {
+      //   // if (!event.target.matches('.dropdown-button')){
+      //   //   let dropdownMenus = document.getElementsByClassName("dropdown-menu")
+      //   //   // dropdowns[0].style.display = "none"
+      //   //   console.log(dropdownMenus)
+      //   //   console.log(typeof dropdownMenus)
+      //   //   dropdownMenus.forEach((menu) => {
+      //   //     console.log()
+      //   //     menu.style.display="none";
+      //   //   }
+      //   // )
+      //   // }
+      // }
+
     </script>
 
   </ul>
