@@ -4,13 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="https://kit.fontawesome.com/cc8cca8e89.js" crossorigin="anonymous"></script>  <style>
+  <script src="https://kit.fontawesome.com/cc8cca8e89.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <style>
+
     body {
       margin:0;
     }
     .navbar{
       background-color:#1e1e1e;
-      /* width: 100%; */
+      font-family: inter;
+      font-size: 14px;
+      font-weight: 100;
     }
     .navbar .top-navbar-container {
       display: flex;
@@ -22,6 +29,7 @@
       text-decoration: none;
     }
     .top-navbar-container {
+      /* font-family: inter; */
       border-bottom: solid;
       border-bottom-width: 1px;
       border-bottom-color: #ffffff26;
@@ -44,9 +52,11 @@
       border: none;
       color: white;
       cursor: pointer;
-      font-family: none;
-      font-size: 16px;
       padding: 0 8px;
+      font-weight: inherit;
+    }
+    .dropdown-option .dropdown-button i {
+      pointer-events: none;
     }
     .dropdown-option .dropdown-menu {
       display: none;
@@ -62,6 +72,10 @@
       display: block;
       padding: 15px 10px;
     }
+    .dropdown-button {
+  /* font-weight: normal; or 400, depending on your design */
+  font-family: inherit; /* optional: match parent */
+}
     .top-navbar-container .right-group-wrapper {
       display:flex;
       align-items: center;
@@ -84,6 +98,7 @@
 
     }
     .bottom-navbar-container {
+      /* font-family: inter; */
       display: flex;
       justify-content: space-between;
       margin: 0 70px;
@@ -116,7 +131,7 @@
           <a href="redirect-page.html">Showcase</a>
           <a href="redirect-page.html">Hosting</a>
           <div class="dropdown-option">
-            <button class="dropdown-button">Extend<i class="fa-solid fa-angle-down"></i></button>
+            <button class="dropdown-button">Extend<i class="fa-regular fa-angle-down"></i></button>
             <div class="dropdown-menu" id="extend-dropdown">
               <a href="redirect-page.html">Themes</a>
               <a href="redirect-page.html">Plugins</a>
