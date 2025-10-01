@@ -24,7 +24,7 @@
       justify-content: space-between;
 
     }
-    a {
+    .navbar a {
       color: white;
       text-decoration: none;
     }
@@ -57,6 +57,8 @@
     }
     .dropdown-option .dropdown-button i {
       pointer-events: none;
+      margin-left: 5px;
+      /* font-weight: inherit; */
     }
     .dropdown-option .dropdown-menu {
       display: none;
@@ -120,6 +122,9 @@
       color: white;
       margin: 0 10px
     }
+    .body {
+      color: #1e1e1e;
+    }
     </style>
 </head>
 <body>
@@ -131,7 +136,7 @@
           <a href="redirect-page.html">Showcase</a>
           <a href="redirect-page.html">Hosting</a>
           <div class="dropdown-option">
-            <button class="dropdown-button">Extend<i class="fa-regular fa-angle-down"></i></button>
+            <button class="dropdown-button">Extend<i class="fa-solid fa-angle-down"></i></button>
             <div class="dropdown-menu" id="extend-dropdown">
               <a href="redirect-page.html">Themes</a>
               <a href="redirect-page.html">Plugins</a>
@@ -170,11 +175,10 @@
           </div>
         </div>
         <div class="right-group-wrapper">
-          <a href="redirect-page.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href="redirect-page.html"><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i></a>
           <a href="redirect-page.html" class="link-button">Get WordPress</a>
         </div>
       </div>
-      <!-- <hr> -->
       <div class="bottom-navbar-container">
         <div class="left-link-wrapper">
           <a href="redirect-page.html">Themes</a>
@@ -187,6 +191,25 @@
         </div>
       </div>
     </div>
+
+    <body>
+      <h1>Twenty Twenty-Two</h1>
+      <div class="word-press-link" >
+        <a href="https://wordpress.org/themes/author/wordpressdotorg/"><img src="../images/inverse-logo.png" width="24px" height="24px" /></a>
+        <a href="https://wordpress.org/themes/author/wordpressdotorg/">WordPress.org</a>
+      </div>
+      <div class="picture-container">
+        <div class="image-wrapper">
+          <img id="heroImage" src="../images/hero1.webp" width="680" height="510"/>
+          <div class="image-buttons">
+            <button onclick="selectImage('../images/hero1.webp')"><img src="../images/button1.jpeg" /></button>
+            <button onclick="selectImage('../images/hero2.jpeg')"><img src="../images/button2.jpeg" /></button>
+            <button onclick="selectImage('../images/hero3.jpeg')"><img src="../images/button3.jpeg" /></button>
+            <button onclick="selectImage('../images/hero4.jpeg')"><img src="../images/button4.jpeg" /></button>
+          </div>
+        </div>
+      </div>
+    </body>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         document.addEventListener("click", ((event) => {
@@ -219,23 +242,9 @@
           }
         }));
       });
-      // function toggleDropdown(menuId) {
-      //   let dropdown = document.getElementById(menuId);
-      //   dropdown.style.display = (dropdown.style.display === "block") ? "none": "block"
-      // }
-      // window.onclick = function(event) {
-      //   // if (!event.target.matches('.dropdown-button')){
-      //   //   let dropdownMenus = document.getElementsByClassName("dropdown-menu")
-      //   //   // dropdowns[0].style.display = "none"
-      //   //   console.log(dropdownMenus)
-      //   //   console.log(typeof dropdownMenus)
-      //   //   dropdownMenus.forEach((menu) => {
-      //   //     console.log()
-      //   //     menu.style.display="none";
-      //   //   }
-      //   // )
-      //   // }
-      // }
+      function selectImage(src) {
+        document.getElementById("heroImage").src = src
+      }
 
     </script>
 
