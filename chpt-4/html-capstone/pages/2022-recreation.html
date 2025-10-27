@@ -75,9 +75,9 @@
       padding: 15px 10px;
     }
     .dropdown-button {
-  /* font-weight: normal; or 400, depending on your design */
-  font-family: inherit; /* optional: match parent */
-}
+      /* font-weight: normal; or 400, depending on your design */
+      font-family: inherit; /* optional: match parent */
+    }
     .top-navbar-container .right-group-wrapper {
       display:flex;
       align-items: center;
@@ -122,9 +122,24 @@
       color: white;
       margin: 0 10px
     }
-    .body {
+    body {
       color: #1e1e1e;
     }
+    .content-container {
+      border: 5px solid red;
+      grid-template-columns: 70% 20%;
+      grid-template-rows: 40% 30% 30%;
+    }
+    body.content-container .theme-image-wrapper {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    body .content-container .theme-details-wrapper {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+
+
     </style>
 </head>
 <body>
@@ -192,24 +207,30 @@
       </div>
     </div>
 
-    <body>
-      <h1>Twenty Twenty-Two</h1>
-      <div class="word-press-link" >
-        <a href="https://wordpress.org/themes/author/wordpressdotorg/"><img src="../images/inverse-logo.png" width="24px" height="24px" /></a>
-        <a href="https://wordpress.org/themes/author/wordpressdotorg/">WordPress.org</a>
-      </div>
-      <div class="picture-container">
-        <div class="image-wrapper">
-          <img id="heroImage" src="../images/hero1.webp" width="680" height="510"/>
-          <div class="image-buttons">
-            <button onclick="selectImage('../images/hero1.webp')"><img src="../images/button1.jpeg" /></button>
-            <button onclick="selectImage('../images/hero2.jpeg')"><img src="../images/button2.jpeg" /></button>
-            <button onclick="selectImage('../images/hero3.jpeg')"><img src="../images/button3.jpeg" /></button>
-            <button onclick="selectImage('../images/hero4.jpeg')"><img src="../images/button4.jpeg" /></button>
+    <div className="content-container">
+      <div class="theme-image-wrapper">
+        <h1>Twenty Twenty-Two</h1>
+        <div class="word-press-link" >
+          <a href="https://wordpress.org/themes/author/wordpressdotorg/"><img src="../images/inverse-logo.png" width="24px" height="24px" /></a>
+          <a href="https://wordpress.org/themes/author/wordpressdotorg/">WordPress.org</a>
+        </div>
+        <div class="picture-container">
+          <div class="image-wrapper">
+            <img id="heroImage" src="../images/hero1.webp" width="680" height="510"/>
+            <div class="image-buttons">
+              <button onclick="selectImage('../images/hero1.webp')"><img src="../images/button1.jpeg" /></button>
+              <button onclick="selectImage('../images/hero2.jpeg')"><img src="../images/button2.jpeg" /></button>
+              <button onclick="selectImage('../images/hero3.jpeg')"><img src="../images/button3.jpeg" /></button>
+              <button onclick="selectImage('../images/hero4.jpeg')"><img src="../images/button4.jpeg" /></button>
+            </div>
           </div>
         </div>
       </div>
-    </body>
+      <div class="theme-details-wrapper">
+        <h2>Community theme</h2>
+        <p>This theme is develop and supported by a community.</p>
+      </div>
+    </div>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         document.addEventListener("click", ((event) => {
