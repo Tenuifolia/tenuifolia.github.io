@@ -12,10 +12,10 @@
 
     body {
       margin:0;
+      font-family: "Inter";
     }
     .navbar{
       background-color:#1e1e1e;
-      font-family: inter;
       font-size: 14px;
       font-weight: 100;
     }
@@ -40,7 +40,10 @@
       align-items: center;
     }
     .top-navbar-container .left-group-wrapper a {
-      padding-left: 15px;
+      padding: 0 15px;
+    }
+    .top-navbar-container .left-group-wrapper .logo {
+      padding-right: 7px;
     }
     .dropdown-option {
       position: relative;
@@ -52,8 +55,9 @@
       border: none;
       color: white;
       cursor: pointer;
-      padding: 0 8px;
+      padding: 0 10px;
       font-weight: inherit;
+      font-size: 14px;
     }
     .dropdown-option .dropdown-button i {
       pointer-events: none;
@@ -88,29 +92,30 @@
     }
     .top-navbar-container .right-group-wrapper .link-button{
       display: inline-block;
-      background-color: blue;
+      background-color: #3858e9;
       border: none;
-      margin: 0 20px;
-      padding-top: 9px;
-      height: 28px;
+      margin: 0 30px 0 40px;
+      padding: 10px 0 7px 3px;
+      height: 20px;
       width: 140px;
       text-decoration: none;
       font-weight: 600;
       text-align: center;
-
+      border-radius: 2px;
     }
     .bottom-navbar-container {
       /* font-family: inter; */
       display: flex;
       justify-content: space-between;
-      margin: 0 70px;
-      height: 70px;
+      margin: 0 60px;
+      height: 60px;
     }
+
     .bottom-navbar-container .left-link-wrapper {
       display: flex;
       align-items: center;
     }
-    .bottom-navbar-container .left-link-wrapper a{
+    .bottom-navbar-container .left-link-wrapper a {
       color: white;
       margin: 0 10px
     }
@@ -118,119 +123,326 @@
       display: flex;
       align-items: center;
     }
-    .bottom-navbar-container .right-link-wrapper a{
+    .bottom-navbar-container .right-link-wrapper a {
       color: white;
-      margin: 0 10px
+      margin: 0 20px
+    }
+    .bottom-navbar-container .right-link-wrapper i {
+      color:grey;
+      font-size: 3px;
     }
     body {
       color: #1e1e1e;
     }
     .content-container {
-      border: 5px solid red;
-      grid-template-columns: 70% 20%;
-      grid-template-rows: 40% 30% 30%;
+      display: grid;
+      width: 1160px;
+      max-width:calc(100vw - 140px);
+      height: 100%;
+      padding: 25px 70px 0 70px;
+      justify-self: center;
+      grid-template-columns: 67% 28%;
+      grid-template-rows: 160px 720px 2500px;
+      column-gap: 5%;
     }
-    body.content-container .theme-image-wrapper {
+    .content-container .title-wrapper {
+      padding-bottom: 30px;
+      grid-row: 1/2;
       grid-column: 1/2;
-      grid-row: 1/2;
     }
-    body .content-container .theme-details-wrapper {
+    .content-container .title-wrapper h1 {
+      font-weight: 100;
+      margin: 30px 0 18px 0;
+      font-family: "Times New Roman", Times, serif;
+    }
+    .content-container .title-wrapper .word-press-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .content-container .theme-image-wrapper {
+      grid-column: 1/2;
+      grid-row: 2/3;
+
+    }
+
+    .content-container .theme-image-wrapper .picture-container {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .content-container .theme-image-wrapper .picture-container .image-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-start;
+    }
+
+    .content-container .theme-image-wrapper .picture-container .image-buttons button {
+      width: 130px;
+      height: 82px;
+      border: 1px solid #cccccc;
+      padding: 0;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .content-container .theme-image-wrapper .style-variations-wrapper {
+      display: flex;
+      justify-content: space-between;
+      max-width: 100%;
+    }
+    .content-container .theme-image-wrapper .style-variations-wrapper .left-right-buttons button {
+      background-color: transparent;
+      border: none;
+      font-size: 40px;
+    }
+
+    .content-container .theme-details-wrapper {
       grid-column: 2/3;
-      grid-row: 1/2;
+      grid-row: 2/3;
+    }
+    .content-container .theme-details-wrapper h2 {
+      margin-top: 0;
     }
 
 
+    .content-container .theme-details-wrapper .preview-download-buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .content-container .theme-details-wrapper .preview-download-buttons {
+      height: 50px;
+      width: 100%;
+      font-weight: 600;
+      /* box-shadow: none; */
+      border: none;
+    }
+    .content-container .theme-details-wrapper .preview-download-buttons .blue-button {
+      background-color: #3858e9;
+      border: 1px solid #3858e9;
+      color: white;
+    }
+    .content-container .theme-details-wrapper .preview-download-buttons .white-button {
+      background-color: transparent;
+      color: #3858e9;
+      border: 1px solid #3858e9;
+    }
+    .content-container .theme-details-wrapper .preview-download-buttons button {
+      width: 100%;
+      border-radius: 2px;
+      font-size: 16px;
+    }
+
+    .content-container .theme-details-wrapper .theme-info-wrapper {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+    }
+    .content-container .theme-details-wrapper .theme-info-wrapper .theme-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #cccccc;
+    }
+    .content-container .theme-details-wrapper .theme-info-wrapper .theme-row p {
+      margin: 15px 0;
+    }
+    .content-container .theme-details-wrapper .home-page-link {
+      margin-top: 10px;
+    }
+
+    .content-container .text-features-patterns-wrapper {
+      grid-row: 3/4;
+      grid-column: 1/2;
+    }
+
+    .content-container .text-features-patterns-wrapper .patterns-wrapper div {
+      display: flex;
+      width: 100%;
+      gap: 25px;
+      margin-bottom: 25px;
+    }
+    .content-container .text-features-patterns-wrapper .patterns-wrapper div button {
+      overflow: hidden;
+      border: 1px solid #cccccc;
+      background-color: transparent;
+      border-radius: 3px;
+      padding: 0 25px;
+      height: 190px;
+    }
+    .content-container .text-features-patterns-wrapper .patterns-wrapper div button img{
+      width: 100%;
+    }
     </style>
 </head>
 <body>
-    <div class="navbar">
-      <div class="top-navbar-container">
-        <div class="left-group-wrapper">
-          <a href="../index.html"> <img src="../images/WordPress-logotype-wmark-white.png" width="50px" height="50px"></a>
-          <a href="redirect-page.html">News</a>
-          <a href="redirect-page.html">Showcase</a>
-          <a href="redirect-page.html">Hosting</a>
-          <div class="dropdown-option">
-            <button class="dropdown-button">Extend<i class="fa-solid fa-angle-down"></i></button>
-            <div class="dropdown-menu" id="extend-dropdown">
-              <a href="redirect-page.html">Themes</a>
-              <a href="redirect-page.html">Plugins</a>
-              <a href="redirect-page.html">Patterns</a>
-              <a href="redirect-page.html">Blocks</a>
-              <a href="redirect-page.html">Openverse</a>
-            </div>
-          </div>
-          <div class="dropdown-option">
-            <button class="dropdown-button">Learn<i class="fa-solid fa-angle-down"></i></button>
-            <div class="dropdown-menu" id="learn-dropdown">
-              <a href="redirect-page.html">Learn WordPress</a>
-              <a href="redirect-page.html">Documentation</a>
-              <a href="redirect-page.html">Forums</a>
-              <a href="redirect-page.html">Developers</a>
-              <a href="redirect-page.html">WordPress.tv</a>
-            </div>
-          </div>
-          <div class="dropdown-option">
-            <button class="dropdown-button">Community<i class="fa-solid fa-angle-down"></i></button>
-            <div class="dropdown-menu" id="community-dropdown">
-              <a href="redirect-page.html">Make WordPress</a>
-              <a href="redirect-page.html">Photo Directory</a>
-              <a href="redirect-page.html">Five for the Future</a>
-              <a href="redirect-page.html">Events</a>
-              <a href="redirect-page.html">Job Board</a>
-            </div>
-          </div>
-          <div class="dropdown-option">
-            <button class="dropdown-button">About<i class="fa-solid fa-angle-down"></i></button>
-            <div class="dropdown-menu" id="about-dropdown">
-              <a href="redirect-page.html">About WordPress</a>
-              <a href="redirect-page.html">Enterprise</a>
-              <a href="redirect-page.html">Gutenberg</a>
-            </div>
+  <div class="navbar">
+    <div class="top-navbar-container">
+      <div class="left-group-wrapper">
+        <a class="logo" href="../index.html"> <img src="../images/WordPress-logotype-wmark-white.png" width="45px" height="45px"></a>
+        <a href="redirect-page.html">News</a>
+        <a href="redirect-page.html">Showcase</a>
+        <a href="redirect-page.html">Hosting</a>
+        <div class="dropdown-option">
+          <button class="dropdown-button">Extend<i class="fa-solid fa-angle-down"></i></button>
+          <div class="dropdown-menu" id="extend-dropdown">
+            <a href="redirect-page.html">Themes</a>
+            <a href="redirect-page.html">Plugins</a>
+            <a href="redirect-page.html">Patterns</a>
+            <a href="redirect-page.html">Blocks</a>
+            <a href="redirect-page.html">Openverse</a>
           </div>
         </div>
-        <div class="right-group-wrapper">
-          <a href="redirect-page.html"><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i></a>
-          <a href="redirect-page.html" class="link-button">Get WordPress</a>
+        <div class="dropdown-option">
+          <button class="dropdown-button">Learn<i class="fa-solid fa-angle-down"></i></button>
+          <div class="dropdown-menu" id="learn-dropdown">
+            <a href="redirect-page.html">Learn WordPress</a>
+            <a href="redirect-page.html">Documentation</a>
+            <a href="redirect-page.html">Forums</a>
+            <a href="redirect-page.html">Developers</a>
+            <a href="redirect-page.html">WordPress.tv</a>
+          </div>
+        </div>
+        <div class="dropdown-option">
+          <button class="dropdown-button">Community<i class="fa-solid fa-angle-down"></i></button>
+          <div class="dropdown-menu" id="community-dropdown">
+            <a href="redirect-page.html">Make WordPress</a>
+            <a href="redirect-page.html">Photo Directory</a>
+            <a href="redirect-page.html">Five for the Future</a>
+            <a href="redirect-page.html">Events</a>
+            <a href="redirect-page.html">Job Board</a>
+          </div>
+        </div>
+        <div class="dropdown-option">
+          <button class="dropdown-button">About<i class="fa-solid fa-angle-down"></i></button>
+          <div class="dropdown-menu" id="about-dropdown">
+            <a href="redirect-page.html">About WordPress</a>
+            <a href="redirect-page.html">Enterprise</a>
+            <a href="redirect-page.html">Gutenberg</a>
+          </div>
         </div>
       </div>
-      <div class="bottom-navbar-container">
-        <div class="left-link-wrapper">
-          <a href="redirect-page.html">Themes</a>
-        </div>
-        <div class="right-link-wrapper">
-          <a href="redirect-page.html">Submit a theme</a>
-          <a href="redirect-page.html">Commercial theme companies</a>
-          <a href="redirect-page.html">My favorites</a>
-          <a href="redirect-page.html">Log in</a>
-        </div>
+      <div class="right-group-wrapper">
+        <a href="redirect-page.html"><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i></a>
+        <a href="redirect-page.html" class="link-button">Get WordPress</a>
       </div>
     </div>
+    <div class="bottom-navbar-container">
+      <div class="left-link-wrapper">
+        <a href="redirect-page.html">Themes</a>
+      </div>
+      <div class="right-link-wrapper">
+        <a href="redirect-page.html">Submit a theme</a>
+        <a href="redirect-page.html">Commercial theme companies</a>
+        <i class="fa-solid fa-circle"></i>
+        <a href="redirect-page.html">My favorites</a>
+        <a href="redirect-page.html">Log in</a>
+      </div>
+    </div>
+  </div>
 
-    <div className="content-container">
-      <div class="theme-image-wrapper">
-        <h1>Twenty Twenty-Two</h1>
-        <div class="word-press-link" >
-          <a href="https://wordpress.org/themes/author/wordpressdotorg/"><img src="../images/inverse-logo.png" width="24px" height="24px" /></a>
-          <a href="https://wordpress.org/themes/author/wordpressdotorg/">WordPress.org</a>
-        </div>
-        <div class="picture-container">
-          <div class="image-wrapper">
-            <img id="heroImage" src="../images/hero1.webp" width="680" height="510"/>
-            <div class="image-buttons">
-              <button onclick="selectImage('../images/hero1.webp')"><img src="../images/button1.jpeg" /></button>
-              <button onclick="selectImage('../images/hero2.jpeg')"><img src="../images/button2.jpeg" /></button>
-              <button onclick="selectImage('../images/hero3.jpeg')"><img src="../images/button3.jpeg" /></button>
-              <button onclick="selectImage('../images/hero4.jpeg')"><img src="../images/button4.jpeg" /></button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="theme-details-wrapper">
-        <h2>Community theme</h2>
-        <p>This theme is develop and supported by a community.</p>
+  <div class="content-container">
+    <div class="title-wrapper">
+      <h1>Twenty Twenty-Two</h1>
+      <div class="word-press-link" >
+        <a href="https://wordpress.org/themes/author/wordpressdotorg/"><img src="../images/inverse-logo.png" width="24px" height="24px" /></a>
+        <a href="https://wordpress.org/themes/author/wordpressdotorg/">WordPress.org</a>
       </div>
     </div>
+    <div class="theme-image-wrapper">
+      <div class="picture-container">
+        <div class="image-wrapper">
+          <img id="heroImage" src="../images/hero1.webp" width="100%" height="100%"/>
+        </div>
+        <div class="style-variations-wrapper">
+          <p>Style variations (4)</p>
+          <div class="left-right-buttons">
+            <button><i class="fa-regular fa-square-caret-left"></i></button>
+            <button><i class="fa-regular fa-square-caret-right"></i></button>
+          </div>
+        </div>
+        <div class="image-buttons">
+          <button onclick="selectImage('../images/hero1.webp')"><img src="../images/button1.jpeg" width="128px" height="85px" /></button>
+          <button onclick="selectImage('../images/hero2.jpeg')"><img src="../images/button2.jpeg" width="128px" height="85px" /></button>
+          <button onclick="selectImage('../images/hero3.jpeg')"><img src="../images/button3.jpeg" width="128px" height="85px" /></button>
+          <button onclick="selectImage('../images/hero4.jpeg')"><img src="../images/button4.jpeg" width="128px" height="85px" /></button>
+        </div>
+      </div>
+    </div>
+    <div class="theme-details-wrapper">
+      <h2>Community theme</h2>
+      <p>This theme is developed and supported by a community.</p>
+      <div class="preview-download-buttons">
+        <button class="white-button">Preview</button>
+        <button class="blue-button">Download</button>
+      </div>
+      <div class="theme-info-wrapper">
+        <div class="theme-row">
+          <p>Version</p>
+          <p>2.0</p>
+        </div>
+        <div class="theme-row">
+          <p>Last Updated</p>
+          <p>April 15, 2025</p>
+        </div>
+        <div class="theme-row">
+          <p>Active installations</p>
+          <p>2000,000+</p>
+        </div>
+        <div class="theme-row">
+          <p>WordPress version</p>
+          <p>5.9</p>
+        </div>
+        <div class="theme-row">
+          <p>PHP version</p>
+          <p>5.6</p>
+        </div>
+      </div>
+      <div class="home-page-link">
+        <a href="https://wordpress.org/themes/twentytwentytwo/">Theme homepage <i class="fa-solid fa-square-arrow-up-right"></i></a>
+      </div>
+    </div>
+    <div class="text-features-patterns-wrapper">
+      <div class="text-wrapper">
+        <p>Built on a solidly designed foundation, Twenty Twenty-Two embraces the idea that everyone deserves a truly unique website. The theme’s subtle styles are inspired by the diversity and versatility of birds: its typography is lightweight yet strong, its color palette is drawn from nature, and its layout elements sit gently on the page. The true richness of Twenty Twenty-Two lies in its opportunity for customization. The theme is built to take advantage of the Site Editor features introduced in WordPress 5.9, which means that colors, typography, and the layout of every single page on your site can be customized to suit your vision. It also includes dozens of block patterns, opening the door to a wide range of professionally designed layouts in just a few clicks. Whether you’re building a single-page website, a blog, a business website, or a portfolio, Twenty Twenty-Two will help you create a site that is uniquely yours.</p>
+      </div>
+      <div class="features-wrapper">
+        <h2>Features</h2>
+        <a href="redirect-page.html">Accessibility ready,</a>
+        <a href="redirect-page.html">Bock editor patterns,</a>
+        <a href="redirect-page.html">Block editor styles,</a>
+        <a href="redirect-page.html">Blog,</a>
+        <a href="redirect-page.html">Custom colors,</a>
+        <a href="redirect-page.html">Custom logo,</a>
+        <a href="redirect-page.html">Custom menu,</a>
+        <a href="redirect-page.html">Editor style,</a>
+        <a href="redirect-page.html">Featured images,</a>
+        <a href="redirect-page.html">Block themes,</a>
+        <a href="redirect-page.html">News,</a>
+        <a href="redirect-page.html">One column,</a>
+        <a href="redirect-page.html">Portfolio,</a>
+        <a href="redirect-page.html">RTL language support,</a>
+        <a href="redirect-page.html">Sticky post,</a>
+        <a href="redirect-page.html">Style variations,</a>
+        <a href="redirect-page.html">Threaded comments,</a>
+        <a href="redirect-page.html">Wide blocks,</a>
+      </div>
+      <div class="patterns-wrapper">
+        <h2>Patterns</h2>
+        <div class="patterns-row-1">
+          <button><img src="../images/pattern1.jpg"/></button>
+          <button><img src="../images/pattern2.jpg"/></button>
+          <button><img src="../images/pattern3.jpg"/></button>
+        </div>
+        <div class="patterns-row-2">
+          <button><img src="../images/pattern4.jpg"/></button>
+          <button><img src="../images/pattern5.jpg"/></button>
+          <button><img src="../images/pattern6.jpg"/></button>
+        </div>
+      </div>
+    </div>
+  </div>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         document.addEventListener("click", ((event) => {
