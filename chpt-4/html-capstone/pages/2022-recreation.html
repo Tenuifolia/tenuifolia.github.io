@@ -10,12 +10,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <style>
 
+    button:hover, .button-link:hover {
+      cursor: pointer;
+    }
+    a:visited {
+      color: #3858e9;
+    }
     body {
-      margin:0;
+      margin: 0;
       font-family: "Inter";
+      width: 100%;
     }
     .navbar{
-      background-color:#1e1e1e;
+      background-color:#23282d;
       font-size: 14px;
       font-weight: 100;
     }
@@ -29,7 +36,6 @@
       text-decoration: none;
     }
     .top-navbar-container {
-      /* font-family: inter; */
       border-bottom: solid;
       border-bottom-width: 1px;
       border-bottom-color: #ffffff26;
@@ -48,10 +54,10 @@
     .dropdown-option {
       position: relative;
       display: inline-block;
-      background-color: #1e1e1e;
+      background-color: #23282d;
     }
     .dropdown-option .dropdown-button {
-      background-color: #1e1e1e;
+      background-color: #23282d;
       border: none;
       color: white;
       cursor: pointer;
@@ -62,7 +68,6 @@
     .dropdown-option .dropdown-button i {
       pointer-events: none;
       margin-left: 5px;
-      /* font-weight: inherit; */
     }
     .dropdown-option .dropdown-menu {
       display: none;
@@ -70,22 +75,19 @@
       top: 170%;
       left: 0;
       min-width: 160px;
-      /* z-index: 0; */
       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-      background-color: #1e1e1e;
+      background-color: #23282d;
     }
     .dropdown-option .dropdown-menu a {
       display: block;
       padding: 15px 10px;
     }
     .dropdown-button {
-      /* font-weight: normal; or 400, depending on your design */
-      font-family: inherit; /* optional: match parent */
+      font-family: inherit;
     }
     .top-navbar-container .right-group-wrapper {
       display:flex;
       align-items: center;
-
     }
     .fa-magnifying-glass {
       color: white;
@@ -104,13 +106,11 @@
       border-radius: 2px;
     }
     .bottom-navbar-container {
-      /* font-family: inter; */
       display: flex;
       justify-content: space-between;
       margin: 0 60px;
       height: 60px;
     }
-
     .bottom-navbar-container .left-link-wrapper {
       display: flex;
       align-items: center;
@@ -136,13 +136,14 @@
     }
     .content-container {
       display: grid;
-      width: 1160px;
-      max-width:calc(100vw - 140px);
+      width: calc(100% - 140px);
+      max-width: 1160px;
       height: 100%;
-      padding: 25px 70px 0 70px;
+      margin: 0 auto;
+      padding: 25px 0 0 0;
       justify-self: center;
       grid-template-columns: 67% 28%;
-      grid-template-rows: 160px 720px 2500px;
+      grid-template-rows: 160px 720px auto 140px;
       column-gap: 5%;
     }
     .content-container .title-wrapper {
@@ -160,24 +161,19 @@
       align-items: center;
       gap: 10px;
     }
-
     .content-container .theme-image-wrapper {
       grid-column: 1/2;
       grid-row: 2/3;
-
     }
-
     .content-container .theme-image-wrapper .picture-container {
       max-width: 100%;
       max-height: 100%;
     }
-
     .content-container .theme-image-wrapper .picture-container .image-buttons {
       display: flex;
       gap: 10px;
       justify-content: flex-start;
     }
-
     .content-container .theme-image-wrapper .picture-container .image-buttons button {
       width: 130px;
       height: 82px;
@@ -186,7 +182,6 @@
       border-radius: 5px;
       overflow: hidden;
     }
-
     .content-container .theme-image-wrapper .style-variations-wrapper {
       display: flex;
       justify-content: space-between;
@@ -197,7 +192,6 @@
       border: none;
       font-size: 40px;
     }
-
     .content-container .theme-details-wrapper {
       grid-column: 2/3;
       grid-row: 2/3;
@@ -205,36 +199,35 @@
     .content-container .theme-details-wrapper h2 {
       margin-top: 0;
     }
-
-
     .content-container .theme-details-wrapper .preview-download-buttons {
       display: flex;
       gap: 20px;
     }
-
     .content-container .theme-details-wrapper .preview-download-buttons {
       height: 50px;
       width: 100%;
       font-weight: 600;
-      /* box-shadow: none; */
       border: none;
     }
-    .content-container .theme-details-wrapper .preview-download-buttons .blue-button {
+    .content-container .theme-details-wrapper .preview-download-buttons a .blue-button {
       background-color: #3858e9;
       border: 1px solid #3858e9;
       color: white;
     }
-    .content-container .theme-details-wrapper .preview-download-buttons .white-button {
+    .content-container .theme-details-wrapper .preview-download-buttons a .white-button {
       background-color: transparent;
       color: #3858e9;
       border: 1px solid #3858e9;
     }
-    .content-container .theme-details-wrapper .preview-download-buttons button {
+    .content-container .theme-details-wrapper .preview-download-buttons a {
       width: 100%;
       border-radius: 2px;
       font-size: 16px;
     }
-
+    .content-container .theme-details-wrapper .preview-download-buttons a button {
+      height: 100%;
+      width: 100%;
+    }
     .content-container .theme-details-wrapper .theme-info-wrapper {
       display: flex;
       flex-direction: column;
@@ -251,12 +244,25 @@
     .content-container .theme-details-wrapper .home-page-link {
       margin-top: 10px;
     }
-
     .content-container .text-features-patterns-wrapper {
       grid-row: 3/4;
       grid-column: 1/2;
     }
-
+    .content-container .text-features-patterns-wrapper .text-wrapper p {
+      margin: 50px 0;
+      line-height: 2;
+    }
+    .content-container .text-features-patterns-wrapper .features-wrapper h2 {
+      font-weight: 400;
+    }
+    .content-container .text-features-patterns-wrapper .features-wrapper a {
+      display: inline-block;
+      margin: 5px 0;
+    }
+    .content-container .text-features-patterns-wrapper .patterns-wrapper h2 {
+      margin: 50px 0 40px 0;
+      font-weight: 400;
+    }
     .content-container .text-features-patterns-wrapper .patterns-wrapper div {
       display: flex;
       width: 100%;
@@ -270,10 +276,102 @@
       border-radius: 3px;
       padding: 0 25px;
       height: 190px;
+      width: 100%;
     }
     .content-container .text-features-patterns-wrapper .patterns-wrapper div button img{
       width: 100%;
     }
+    .content-container .text-features-patterns-wrapper .patterns-wrapper button {
+      background-color: transparent;
+      color: #3858e9;
+      border: 1px solid #3858e9;
+      height: 40px;
+      width: 144px;
+    }
+    .content-container .text-features-patterns-wrapper .download-wrapper img {
+      width: 100%;
+      height: auto;
+    }
+    .content-container .ratings-support-report-wrapper {
+      grid-row: 3/4;
+      grid-column: 2/3;
+      margin-top: 25px;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .content-container .ratings-support-report-wrapper h3 {
+      margin: 25px 0 35px 0;
+      font-weight: 400;
+      font-size: 22px;
+    }
+    .content-container .ratings-support-report-wrapper .review-link-wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 103%;
+    }
+    .content-container .ratings-support-report-wrapper .translations-wrapper .translate-link{
+      display: inline-block;
+      margin: 25px 0 5px 0;
+    }
+    .content-container .ratings-support-report-wrapper .browse-wrapper a {
+      display: block;
+    }
+    .footer .navigation-links-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 71px;
+      padding: 0 80px;
+      border-top: 1px solid #cccccc;
+    }
+    .footer .navigation-links-wrapper i {
+      vertical-align: middle;
+      font-size: 4px;
+      color: #3858e9;
+    }
+    .footer .links-contact-wrapper {
+      height: auto;
+      background-color: #23282d;
+      color: white;
+    }
+    .footer .links-contact-wrapper .lists-wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding: 50px 200px 40px 80px;
+    }
+    .footer .links-contact-wrapper .lists-wrapper ul {
+      list-style: none;
+      padding: none;
+    }
+    .footer .links-contact-wrapper .lists-wrapper ul li {
+      padding: 5px 0;
+      color: white;
+    }
+    .footer .links-contact-wrapper .lists-wrapper ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer .links-contact-wrapper .contact-links-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 50px 50px 50px;
+    }
+    .footer .links-contact-wrapper .contact-links-wrapper img {
+      height: auto;
+      max-height: 100%;
+    }
+    .footer .links-contact-wrapper .contact-links-wrapper img {
+      margin-left: 70px;
+    }
+    .footer .links-contact-wrapper .contact-links-wrapper .right-contact {
+      font-size: 25px;
+    }
+    .footer .links-contact-wrapper .contact-links-wrapper .right-contact i {
+      padding: 0 5px;
+    }
+
     </style>
 </head>
 <body>
@@ -374,8 +472,8 @@
       <h2>Community theme</h2>
       <p>This theme is developed and supported by a community.</p>
       <div class="preview-download-buttons">
-        <button class="white-button">Preview</button>
-        <button class="blue-button">Download</button>
+        <a href="redirect-page.html"><button class="white-button">Preview</button></a>
+        <a href="redirect-page.html"><button class="blue-button">Download</button></a>
       </div>
       <div class="theme-info-wrapper">
         <div class="theme-row">
@@ -431,58 +529,185 @@
       <div class="patterns-wrapper">
         <h2>Patterns</h2>
         <div class="patterns-row-1">
-          <button><img src="../images/pattern1.jpg"/></button>
-          <button><img src="../images/pattern2.jpg"/></button>
-          <button><img src="../images/pattern3.jpg"/></button>
+          <a href="redirect-page.html"><button><img src="../images/pattern1.jpg"/></button></a>
+          <a href="redirect-page.html"><button><img src="../images/pattern2.jpg"/></button></a>
+          <a href="redirect-page.html"><button><img src="../images/pattern3.jpg"/></button></a>
         </div>
         <div class="patterns-row-2">
-          <button><img src="../images/pattern4.jpg"/></button>
-          <button><img src="../images/pattern5.jpg"/></button>
-          <button><img src="../images/pattern6.jpg"/></button>
+          <a href="redirect-page.html"><button><img src="../images/pattern4.jpg"/></button></a>
+          <a href="redirect-page.html"><button><img src="../images/pattern5.jpg"/></button></a>
+          <a href="redirect-page.html"><button><img src="../images/pattern6.jpg"/></button></a>
+        </div>
+        <a href="redirect-page.html"><button>Show all patterns</button></a>
+      </div>
+      <div class="download-wrapper">
+        <h2>Downloads per day</h2>
+        <img src="../images/graph.png"/>
+      </div>
+    </div>
+    <div class="ratings-support-report-wrapper">
+      <div class="ratings-wrapper">
+        <h3>Ratings</h3>
+        <img src="../images/ratings.png"/>
+        <div class="review-link-wrapper">
+           <a href="redirect-page.html">Add my review</a>
+           <a href="redirect-page.html">See all</a>
+        </div>
+      </div>
+      <div class="support-wrapper">
+        <h3>Support</h3>
+        <p>Got something to say? Need help?</p>
+        <a href="redirect-page.html">View support forum</a>
+      </div>
+      <div class="report-wrapper">
+        <h3>Report</h3>
+        <p>Does this theme have major issues?</p>
+        <a href="redirect-page.html">Report this theme</a>
+      </div>
+      <div class="translations-wrapper">
+        <h3>Translations</h3>
+        <p>This theme is available in the following languages:</p>
+        <a href="redirect-page.html">Asturianu,</a>
+        <a href="redirect-page.html">Български,</a>
+        <a href="redirect-page.html">Català,</a>
+        <a href="redirect-page.html">Čeština,</a>
+        <a href="redirect-page.html">Cymraeg,</a>
+        <a href="redirect-page.html">Dansk,</a>
+        <a href="redirect-page.html">Deutsch (Schweiz),</a>
+        <a href="redirect-page.html">Deutsch,</a>
+        <a href="redirect-page.html">English (Canada),</a>
+        <a href="redirect-page.html">English (UK),</a>
+        <a href="redirect-page.html">English (US)</a>
+        <a href="redirect-page.html">Esperanto,</a>
+        <a href="redirect-page.html">Español de Argentina,</a>
+        <a href="redirect-page.html">Español de Chile,</a>
+        <a href="redirect-page.html">Español de Colombia,</a>
+        <a href="redirect-page.html">Español de Costa Rica,</a>
+        <a href="redirect-page.html">Español de Ecuador,</a>
+        <a href="redirect-page.html">Español,</a>
+        <a href="redirect-page.html">Español de México,</a>
+        <a href="redirect-page.html">Español de Venezuela,</a>
+        <a href="redirect-page.html">(فارسی (افغانستان,</a>
+        <a href="redirect-page.html">Français,</a>
+        <a href="redirect-page.html">Frysk,</a>
+        <a href="redirect-page.html">Galego,</a>
+        <a href="redirect-page.html">ગુજરાતી,</a>
+        <a href="redirect-page.html">हिन्दी,</a>
+        <a href="redirect-page.html">Hrvatski,</a>
+        <a href="redirect-page.html">Magyar,</a>
+        <a href="redirect-page.html">Bahasa Indonesia,</a>
+        <a href="redirect-page.html">Italiano,</a>
+        <a href="redirect-page.html">日本語,</a>
+        <a href="redirect-page.html">Кыргызча,</a>
+        <a href="redirect-page.html">한국어,</a>
+        <a href="redirect-page.html">Latviešu valoda, Norsk bokmål,</a>
+        <a href="redirect-page.html">नेपाली,</a>
+        <a href="redirect-page.html">Nederlands (België),</a>
+        <a href="redirect-page.html">Nederlands,</a>
+        <a href="redirect-page.html">Polski,</a>
+        <a href="redirect-page.html">Português,</a>
+        <a href="redirect-page.html">Română,</a>
+        <a href="redirect-page.html">Русский,</a>
+        <a href="redirect-page.html">Shqip,</a>
+        <a href="redirect-page.html">Svenska,</a>
+        <a href="redirect-page.html">Türkçe,</a>
+        <a href="redirect-page.html">简体中文,</a> and
+        <a href="redirect-page.html">繁體中文,</a>
+        <a class="translate-link" href="redirect-page.html">Translate this theme</a>
+      </div>
+      <div class="browse-wrapper">
+        <h3>Browse the code</h3>
+        <a href="redirect-page.html">Development log</a>
+        <a href="redirect-page.html">Subversion repository</a>
+        <a href="redirect-page.html">Browse in Trac</a>
+        <a href="redirect-page.html">Trac tickets</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="navigation-links-wrapper">
+      <a href="redirect-page.html">Previous Dog <i class="fa-solid fa-circle"></i> Breeder</a>
+      <a href="redirect-page.html">Servicio <i class="fa-solid fa-circle"></i> Next</a>
+    </div>
+    <div class="links-contact-wrapper">
+      <div class="lists-wrapper">
+        <ul>
+          <li><a href="redirect-page.html">About</a></li>
+          <li><a href="redirect-page.html">News</a></li>
+          <li><a href="redirect-page.html">Hosting</a></li>
+          <li><a href="redirect-page.html">Privacy</a></li>
+        </ul>
+        <ul>
+          <li><a href="redirect-page.html">Showcase</a></li>
+          <li><a href="redirect-page.html">Themes</a></li>
+          <li><a href="redirect-page.html">Plugins</a></li>
+          <li><a href="redirect-page.html">Patterns</a></li>
+        </ul>
+        <ul>
+          <li><a href="redirect-page.html">Learn</a></li>
+          <li><a href="redirect-page.html">Documentation</a></li>
+          <li><a href="redirect-page.html">Developers</a></li>
+          <li><a href="redirect-page.html">WordPress.tv </a><i class="fa-solid fa-square-arrow-up-right"></i></li>
+        </ul>
+        <ul>
+          <li><a href="redirect-page.html">Get Involved</a></li>
+          <li><a href="redirect-page.html">Events</a></li>
+          <li><a href="redirect-page.html">Donate </a><i class="fa-solid fa-square-arrow-up-right"></i></li>
+          <li><a href="redirect-page.html">Five for the Future</a></li>
+        </ul>
+        <ul>
+          <li><a href="redirect-page.html">WordPress.com </a><i class="fa-solid fa-square-arrow-up-right"></i></li>
+          <li><a href="redirect-page.html">Matt </a><i class="fa-solid fa-square-arrow-up-right"></i></li>
+          <li><a href="redirect-page.html">bbPress </a><i class="fa-solid fa-square-arrow-up-right"></i></li>
+          <li><a href="redirect-page.html">BuddyPress </a><i class="fa-solid fa-square-arrow-up-right"></i></li>
+        </ul>
+      </div>
+      <div class="contact-links-wrapper">
+          <img src="../images/wordpress-org.png"/>
+          <img class="center-poetry" src="../images/code-is-poetry.png"/>
+        <div class="right-contact">
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-solid fa-spaghetti-monster-flying"></i>
+          <i class="fa-brands fa-mastodon"></i>
+          <i class="fa-brands fa-threads"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-tiktok"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-tumblr"></i>
         </div>
       </div>
     </div>
   </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        document.addEventListener("click", ((event) => {
-          let isDropdownButton = event.target.matches(".dropdown-button");
-          let isDropdownMenu = event.target.closest(".dropdown-menu");
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.addEventListener("click", ((event) => {
+        let isDropdownButton = event.target.matches(".dropdown-button");
+        let isDropdownMenu = event.target.closest(".dropdown-menu");
+        let dropdowns = document.querySelectorAll(".dropdown-menu");
 
-          let dropdowns = document.querySelectorAll(".dropdown-menu");
-
-          // Handle button click (toggle the correct dropdown)
-          if (isDropdownButton) {
-            let button = event.target;
-            let targetDropdown = button.nextElementSibling;
-
-            // Close all dropdowns except the one being clicked
-            dropdowns.forEach((dropdown) => {
-              if (dropdown !== targetDropdown) {
-                dropdown.style.display = "none";
-              }
-            });
-
-            // Toggle visibility of clicked dropdown
-            targetDropdown.style.display =
-              targetDropdown.style.display === "block" ? "none" : "block";
-          }
-          // If clicked outside any dropdown or button, close all dropdowns
-          else if (!isDropdownMenu) {
-            dropdowns.forEach((dropdown) => {
+        if (isDropdownButton) {
+          let button = event.target;
+          let targetDropdown = button.nextElementSibling;
+          dropdowns.forEach((dropdown) => {
+            if (dropdown !== targetDropdown) {
               dropdown.style.display = "none";
-            });
-          }
-        }));
-      });
-      function selectImage(src) {
-        document.getElementById("heroImage").src = src
-      }
-
-    </script>
-
-  </ul>
-
-
+            }
+          });
+          targetDropdown.style.display =
+            targetDropdown.style.display === "block" ? "none" : "block";
+        }
+        else if (!isDropdownMenu) {
+          dropdowns.forEach((dropdown) => {
+            dropdown.style.display = "none";
+          });
+        }
+      }));
+    });
+    function selectImage(src) {
+      document.getElementById("heroImage").src = src
+    }
+  </script>
 </body>
 </html>
